@@ -1,0 +1,13 @@
+Word Atlas vocabulary text (词光)
+
+Attribution: Word Atlas contributors（词光）
+Original project: https://github.com/designfuchen/word-atlas
+Dataset: https://github.com/designfuchen/word-atlas/blob/main/data/word-atlas.json
+License: Creative Commons Attribution 4.0 International
+https://creativecommons.org/licenses/by/4.0/
+
+ComeOnRemember selects examples, supplies target highlights and associates them
+with vocabulary entries. Rows marked 搭配改编 use an original context written
+around a source collocation. Rows marked 同义语境改编 adapt a source sentence
+for a related target word. The adapted text retains the same attribution and
+license. No source images or recordings are included.

@@ -1,0 +1,26 @@
+Mandarin Chinese–English example sentences
+
+Source: Mandarin Chinese–English sentence pairs selected by ManyThings
+https://www.manythings.org/anki/
+Original corpus: Tatoeba
+https://tatoeba.org/
+
+License: Creative Commons Attribution 2.0 France (CC BY 2.0 FR)
+https://creativecommons.org/licenses/by/2.0/fr/
+
+The sentence IDs and authors of both the English and Chinese texts are
+included in the bundled data and shown in «例句来源与署名» after revealing
+the corresponding examples.
+
+Changes: selected and associated sentence pairs with vocabulary entries.
+Chinese text was converted to simplified Chinese. English text is unchanged.
+Home-grown examples do not carry Tatoeba attribution.
+
+Supplemental practice sentences
+English sense and part-of-speech metadata: Princeton WordNet 3.0
+https://wordnet.princeton.edu/
+Chinese sense alignment: Chinese Open WordNet by Francis Bond and Shan Wang
+The WordNet licenses are supplied alongside this file.
+Original practice sentences were written or constructed for the application
+from the built-in vocabulary and its senses. Other sources are credited
+separately alongside their examples.
