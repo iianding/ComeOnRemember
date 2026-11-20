@@ -13,13 +13,15 @@
   color: #20232a;
   background: #f2f3f5;
   --ink: #20232a;
-  --muted: #525761;
+  --muted: #424955;
   --accent: #6747a3;
   --accent-dark: #563789;
-  --line: #4c566f26;
-  --glass: linear-gradient(150deg, #ffffffad, #ffffff38);
-  --glass-edge: #ffffffdf;
-  --shadow: inset 0 1px 1px #fffffff2, 0 14px 38px #252d3f12;
+  --line: #4c566f30;
+  --glass: linear-gradient(145deg, #ffffff4d, #ffffff0a 58%, #ffffff26);
+  --glass-edge: #ffffffdd;
+  --shadow: inset 0 1px 0 #fffffff2, inset 0 -1px 0 #6555841a, 0 12px 32px #37314e15;
+  --glass-control: linear-gradient(150deg, #ffffff9c, #ffffff40);
+  --surface-border: #666e801f;
 }
 
 * { box-sizing: border-box; }
@@ -28,10 +30,11 @@ body {
   margin: 0;
   min-height: 100vh;
   background:
-    radial-gradient(ellipse at 82% 10%, #ffffff 0%, #ffffff80 19%, transparent 49%),
-    radial-gradient(ellipse at 11% 62%, #e4e8ee 0%, transparent 55%),
-    radial-gradient(ellipse at 91% 85%, #e6e1ee 0%, transparent 37%),
-    #f5f6f8;
+    radial-gradient(ellipse at 93% 20%, #e6dcf7, transparent 52%),
+    radial-gradient(ellipse at 8% 61%, #dbe8f5, transparent 58%),
+    radial-gradient(ellipse at 82% 96%, #eee0f0, transparent 44%),
+    radial-gradient(ellipse at 25% 8%, #ffffff, transparent 60%),
+    #f2f4f9;
   background-attachment: fixed;
 }
 
@@ -47,12 +50,24 @@ p { line-height: 1.65; }
 
 .shell { max-width: 1170px; padding: 32px 32px 54px; margin: auto; }
 
+.about { margin-top: 14px; color: var(--muted); font-size: 0.75rem; }
+.about summary { width: fit-content; cursor: pointer; }
+.about summary:hover { text-decoration: underline; }
+.about p { margin: 6px 0; }
+.license-notices > details { margin-top: 8px; }
+.license-notices pre {
+  margin: 8px 0 0;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  font: 0.875rem/1.55 system-ui, sans-serif;
+}
+
 .glass, .hero {
   background: var(--glass);
   border: 1px solid var(--glass-edge);
   box-shadow: var(--shadow);
-  -webkit-backdrop-filter: blur(22px) saturate(135%);
-  backdrop-filter: blur(22px) saturate(135%);
+  -webkit-backdrop-filter: blur(10px) saturate(118%);
+  backdrop-filter: blur(10px) saturate(118%);
 }
 
 
@@ -66,8 +81,8 @@ p { line-height: 1.65; }
   padding: 44px 53px;
   border-radius: 32px;
   background:
-    radial-gradient(ellipse at 80% 66%, #d4c2ee78, transparent 35%),
-    linear-gradient(115deg, #ffffffd9, #ffffff30 73%, #f8faff6e);
+    radial-gradient(ellipse at 80% 66%, #cdb9ec45, transparent 43%),
+    var(--glass);
 }
 .hero > div:first-child { position: relative; z-index: 1; }
 .hero h1 {
@@ -101,7 +116,7 @@ p { line-height: 1.65; }
   top: 6%;
   left: 22%;
   transform: rotate(16deg);
-  background: linear-gradient(136deg, #ffffff9c, #ffffff17 63%, #d1c9e675);
+  background: linear-gradient(136deg, #ffffff64, #ffffff0e 63%, #cabbe64a);
 }
 .glass-art::after {
   top: 22%;
@@ -110,34 +125,34 @@ p { line-height: 1.65; }
   background:
     linear-gradient(90deg, #535a7442, #8187a123) 31% 47% / 44% 2px no-repeat,
     linear-gradient(90deg, #535a7442, #8187a123) 24% 61% / 34% 2px no-repeat,
-    linear-gradient(140deg, #ffffffc4, #ffffff38 55%, #edeaf5a8);
-  -webkit-backdrop-filter: blur(8px);
-  backdrop-filter: blur(8px);
+    linear-gradient(140deg, #ffffff6b, #ffffff12 55%, #eee8f763);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
 }
 .glass-art span {
   top: 11%;
   left: 15%;
   transform: rotate(2deg);
-  background: linear-gradient(125deg, #ffffffbd, #f2f2f960 58%, #e1d9f273);
+  background: linear-gradient(125deg, #ffffff60, #f2f2f92e 58%, #dfd2f154);
 }
 
 button {
   padding: 10px 16px;
   border: 1px solid var(--line);
   border-radius: 13px;
-  background: #ffffff8f;
+  background: #ffffff65;
   font-weight: 630;
   line-height: 1.4;
 }
 button:hover:not(:disabled) { filter: brightness(.97); }
 .primary, .hero-button {
-  background: linear-gradient(140deg, #f0e8fa, #e0d3f1);
+  background: linear-gradient(140deg, #f0e8fac9, #dac8f0b8);
   border-color: #916bb53d;
   color: #51377b;
   box-shadow: inset 0 1px 1px #ffffff45, 0 4px 12px #704aa31c;
 }
 .hero-button { padding: 11px 21px; }
-.quiet { background: #ffffff8f; border-color: var(--line); color: var(--muted); }
+.quiet { background: #ffffff65; border-color: var(--line); color: var(--muted); }
 
 .grid { display: grid; grid-template-columns: minmax(0, 1.8fr) minmax(258px, 1fr); gap: 20px; margin-top: 21px; align-items: start; }
 .wide { grid-template-columns: minmax(0, 1.15fr) minmax(300px, 1fr); }
@@ -146,31 +161,31 @@ button:hover:not(:disabled) { filter: brightness(.97); }
 .row { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
 .muted, small { color: var(--muted); }
 .stats { display: grid; grid-template-columns: 1fr 1fr; gap: 11px; margin: 19px 0 15px; }
-.tile { background: #e7ebf045; border: 1px solid #ffffffc7; border-radius: 17px; padding: 13px 16px; }
+.tile { background: #ffffff24; border: 1px solid #ffffffbd; border-radius: 17px; padding: 13px 16px; }
 
 .tile span { font-size: 14px; color: var(--muted); }
 .tile strong { display: block; margin-top: 3px; font-size: 33px; letter-spacing: -.055em; font-variant-numeric: tabular-nums; }
 .decks { display: grid; gap: 8px; margin-top: 15px; }
-.decks button { display: flex; justify-content: space-between; text-align: left; background: #ffffff69; font-weight: 550; }
+.decks button { display: flex; justify-content: space-between; text-align: left; background: #ffffff42; font-weight: 550; }
 .decks button[aria-pressed=true] { background: #ece5f6a8; border-color: #7850a827; color: var(--accent-dark); box-shadow: inset 0 1px 1px #fff9; }
 .decks span { color: var(--muted); font-variant-numeric: tabular-nums; }
 .card {
   margin: 17px 0 14px;
   padding: 22px;
-  background: linear-gradient(135deg, #ffffffc7, #f0f2f57a);
+  background: linear-gradient(135deg, #ffffff47, #ffffff0f);
   border: 1px solid var(--glass-edge);
   border-radius: 21px;
   box-shadow: inset 0 1px 1px #fff, 0 8px 22px #252d3f0d;
 }
 .card h3 { font-size: clamp(25px, 4vw, 38px); margin: 9px 0; letter-spacing: -.04em; overflow-wrap: anywhere; }
 .card .usage-prompt { font-weight: 400; line-height: 1.45; letter-spacing: -.025em; }
-.card .usage-answer { font-weight: 350; }
+.card .usage-answer { font-weight: 400; }
 .usage-examples { display: grid; gap: 10px; margin: 12px 0; }
 .usage-example, .usage-hint {
   padding: 12px 14px;
   border: 1px solid var(--glass-edge);
   border-radius: 14px;
-  background: #ffffff65;
+  background: #ffffff38;
 }
 .usage-example p { margin: 6px 0; }
 .usage-example .row { gap: 8px; flex-wrap: wrap; }
@@ -224,7 +239,7 @@ button:hover:not(:disabled) { filter: brightness(.97); }
   padding: 10px 12px;
   border: 1px solid var(--line);
   border-radius: 12px;
-  background: #ffffffa6;
+  background: #ffffff7a;
 }
 .form textarea { resize: vertical; min-height: 69px; }
 .form h2 { margin-bottom: 4px; }
@@ -234,16 +249,14 @@ dialog {
   padding: 26px;
   border: 1px solid var(--glass-edge);
   border-radius: 24px;
-  background: #fafafdeb;
   color: var(--ink);
   box-shadow: 0 17px 65px #4226603d;
 }
-dialog::backdrop { background: #262b3950; backdrop-filter: blur(8px); }
 #list-pages, #backup-actions { margin-top: 17px; }
 .header-user, .start-tools, .deck-tools { display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
 .header-user select, .start-tools select {
   padding:8px 10px; min-width:0; max-width:100%; border-radius:12px;
-  border:1px solid var(--line); background:#ffffffab;
+  border:1px solid var(--line); background:#ffffff52;
 }
 #profile-select { max-width:12em; }
 .start-tools label { display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
@@ -273,15 +286,6 @@ dialog::backdrop { background: #262b3950; backdrop-filter: blur(8px); }
 @media (prefers-reduced-motion: no-preference) {
   button { transition: background-color .15s, filter .15s; }
 }
-:root {
-  --glass: linear-gradient(150deg, #ffffffb8, #ffffff55);
-  --glass-edge: #ffffffed;
-  --shadow: inset 0 1px 0 #ffffffed, 0 10px 32px #2a30420e;
-  --glass-control: linear-gradient(150deg, #ffffffe0, #ffffff79);
-  --lavender-selection: #ece5f6;
-  --surface-border: #666e801f;
-}
-
 .shell { max-width:1240px; padding-top:24px; }
 .site-header {
   position:sticky;
@@ -293,7 +297,9 @@ dialog::backdrop { background: #262b3950; backdrop-filter: blur(8px); }
   min-height:66px;
   padding:8px 12px 8px 15px;
   border-radius:26px;
-  background:linear-gradient(115deg,#ffffffe6,#f8f8fb9c);
+  background:linear-gradient(115deg,#ffffff70,#f8f8fb5c);
+  -webkit-backdrop-filter:blur(18px) saturate(118%);
+  backdrop-filter:blur(18px) saturate(118%);
 }
 .brand { min-width:0; gap:9px; font-size:clamp(15px,1.7vw,20px); }
 .mark { width:36px; height:36px; }
@@ -308,7 +314,7 @@ dialog::backdrop { background: #262b3950; backdrop-filter: blur(8px); }
 .tabs button { min-height:36px; padding:6px 17px; border-radius:999px; white-space:nowrap; }
 .tabs button[aria-pressed=true] {
   color:var(--accent-dark);
-  background:linear-gradient(160deg,#fffffff8,#eee7f7d9);
+  background:linear-gradient(160deg,#ffffffa8,#eee7f7ac);
   box-shadow:0 2px 6px #3c2a6314;
 }
 .header-user {
@@ -346,7 +352,7 @@ dialog::backdrop { background: #262b3950; backdrop-filter: blur(8px); }
   gap:7px;
   border:1px solid var(--glass-edge);
   border-radius:21px;
-  background:#ffffff58;
+  background:#ffffff36;
   box-shadow:inset 0 1px 1px white,0 4px 14px #252d3f09;
 }
 .start-tools label { padding-left:8px; gap:7px; color:var(--muted); font-size:14px; }
@@ -362,22 +368,22 @@ button:hover:not(:disabled) { filter:brightness(.96); }
   padding:2px 8px;
   border-radius:999px;
   font-size:13px;
-  background:#ffffff83;
+  background:#ffffff48;
 }
 dialog {
   border-radius:28px;
-  background:linear-gradient(145deg,#ffffffef,#f7f7fbed);
+  background:linear-gradient(145deg,#ffffffa8,#f9f8fc80);
   box-shadow:inset 0 1px 1px white,0 25px 85px #28203838;
   -webkit-backdrop-filter:blur(28px) saturate(125%);
   backdrop-filter:blur(28px) saturate(125%);
 }
-dialog::backdrop { background:#29263e43; -webkit-backdrop-filter:blur(5px); backdrop-filter:blur(5px); }
+dialog::backdrop { background:#30263f33; -webkit-backdrop-filter:blur(12px); backdrop-filter:blur(12px); }
 dialog h2, dialog h3 { margin:0; }
 .dialog-heading { flex-wrap:nowrap; }
 .dialog-close { border-radius:50%; width:34px; height:34px; padding:0; font-size:20px; }
 #plan-estimate { display:block; padding:11px 13px; border-radius:14px; background:#ece6f6a8; }
 .profile-fields { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
-.profile-fields form { align-content:start; padding:13px; border:1px solid #fff; border-radius:17px; background:#ffffff7a; }
+.profile-fields form { align-content:start; padding:13px; border:1px solid var(--glass-edge); border-radius:17px; background:#ffffff47; }
 .profile-progress { max-height:35vh; overflow:auto; padding-right:6px; }
 #backup-actions { padding-top:15px; border-top:1px solid var(--surface-border); }
 #confirm-message { margin:0; overflow-wrap:anywhere; }
@@ -423,7 +429,7 @@ dialog h2, dialog h3 { margin:0; }
   padding:7px 14px;
   border:1px solid #a987c46b;
   border-radius:999px;
-  background:linear-gradient(145deg,#ffffffd9,#ece2f6ee);
+  background:linear-gradient(145deg,#ffffff75,#ece2f6b8);
   color:var(--accent-dark);
   font-weight:700;
   box-shadow:inset 0 1px 0 white,0 3px 10px #62468d1b;
@@ -510,6 +516,161 @@ dialog h2, dialog h3 { margin:0; }
   </div>
 </section>
 </main>
+<footer class="about">
+  <details>
+    <summary>关于</summary>
+    <p>ComeOnRemember · v0.1.0</p>
+    <details id="data-licences" class="license-notices">
+      <summary>来源与授权</summary>
+      <details>
+        <summary>ECDICT</summary>
+        <pre lang="en">ECDICT
+https://github.com/skywind3000/ECDICT
+This application uses selected tagged headwords, phonetics and Chinese
+translations from ecdict.csv. The original CSV is not distributed here.
+
+MIT License
+
+Copyright (c) 2025 Linwei
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+</pre>
+      </details>
+      <details>
+        <summary>Tatoeba</summary>
+        <pre lang="en">Mandarin Chinese–English example sentences
+
+Source: Mandarin Chinese–English sentence pairs selected by ManyThings
+https://www.manythings.org/anki/
+Original corpus: Tatoeba
+https://tatoeba.org/
+
+License: Creative Commons Attribution 2.0 France (CC BY 2.0 FR)
+https://creativecommons.org/licenses/by/2.0/fr/
+
+The sentence IDs and authors of both the English and Chinese texts are
+included in the bundled data and shown in «例句来源与署名» after revealing
+the corresponding examples.
+
+Changes: selected and associated sentence pairs with vocabulary entries.
+Chinese text was converted to simplified Chinese. English text is unchanged.
+Home-grown examples do not carry Tatoeba attribution.
+
+Supplemental practice sentences
+English sense and part-of-speech metadata: Princeton WordNet 3.0
+https://wordnet.princeton.edu/
+Chinese sense alignment: Chinese Open WordNet by Francis Bond and Shan Wang
+The WordNet licenses are supplied alongside this file.
+Original practice sentences were written or constructed for the application
+from the built-in vocabulary and its senses. Other sources are credited
+separately alongside their examples.
+</pre>
+      </details>
+      <details>
+        <summary>Word Atlas（词光）</summary>
+        <pre lang="en">Word Atlas vocabulary text (词光)
+
+Attribution: Word Atlas contributors（词光）
+Original project: https://github.com/designfuchen/word-atlas
+Dataset: https://github.com/designfuchen/word-atlas/blob/main/data/word-atlas.json
+License: Creative Commons Attribution 4.0 International
+https://creativecommons.org/licenses/by/4.0/
+
+ComeOnRemember selects examples, supplies target highlights and associates them
+with vocabulary entries. Rows marked 搭配改编 use an original context written
+around a source collocation. Rows marked 同义语境改编 adapt a source sentence
+for a related target word. The adapted text retains the same attribution and
+license. No source images or recordings are included.
+</pre>
+      </details>
+      <details>
+        <summary>Princeton WordNet</summary>
+        <pre lang="en">WordNet Release 3.0
+
+This software and database is being provided to you, the LICENSEE, by&#32;&#32;
+Princeton University under the following license.  By obtaining, using&#32;&#32;
+and/or copying this software and database, you agree that you have&#32;&#32;
+read, understood, and will comply with these terms and conditions.:&#32;&#32;
+&#32;&#32;
+Permission to use, copy, modify and distribute this software and&#32;&#32;
+database and its documentation for any purpose and without fee or&#32;&#32;
+royalty is hereby granted, provided that you agree to comply with&#32;&#32;
+the following copyright notice and statements, including the disclaimer,&#32;&#32;
+and that the same appear on ALL copies of the software, database and&#32;&#32;
+documentation, including modifications that you make for internal&#32;&#32;
+use or for distribution.&#32;&#32;
+&#32;&#32;
+WordNet 3.0 Copyright 2006 by Princeton University.  All rights reserved.&#32;&#32;
+&#32;&#32;
+THIS SOFTWARE AND DATABASE IS PROVIDED "AS IS" AND PRINCETON&#32;&#32;
+UNIVERSITY MAKES NO REPRESENTATIONS OR WARRANTIES, EXPRESS OR&#32;&#32;
+IMPLIED.  BY WAY OF EXAMPLE, BUT NOT LIMITATION, PRINCETON&#32;&#32;
+UNIVERSITY MAKES NO REPRESENTATIONS OR WARRANTIES OF MERCHANT-&#32;&#32;
+ABILITY OR FITNESS FOR ANY PARTICULAR PURPOSE OR THAT THE USE&#32;&#32;
+OF THE LICENSED SOFTWARE, DATABASE OR DOCUMENTATION WILL NOT&#32;&#32;
+INFRINGE ANY THIRD PARTY PATENTS, COPYRIGHTS, TRADEMARKS OR&#32;&#32;
+OTHER RIGHTS.&#32;&#32;
+&#32;&#32;
+The name of Princeton University or Princeton may not be used in&#32;&#32;
+advertising or publicity pertaining to distribution of the software&#32;&#32;
+and/or database.  Title to copyright in this software, database and&#32;&#32;
+any associated documentation shall at all times remain with&#32;&#32;
+Princeton University and LICENSEE agrees to preserve same.&#32;&#32;
+</pre>
+      </details>
+      <details>
+        <summary>Chinese Open WordNet</summary>
+        <pre lang="en">Copyright: 2013, 2014 Francis Bond, Shan Wang
+
+Chinese Open WordNet
+
+This software and database is being provided to you, the LICENSEE
+under the following license.  By obtaining, using and/or copying this
+software and database, you agree that you have read, understood, and
+will comply with these terms and conditions:
+&#32;&#32;
+  Permission to use, copy, modify and distribute this software and
+  database and its documentation for any purpose and without fee or
+  royalty is hereby granted, provided that you agree to comply with
+  the following copyright notice and statements, including the
+  disclaimer, and that the same appear on ALL copies of the software,
+  database and documentation, including modifications that you make
+  for internal use or for distribution.
+&#32;&#32;
+Chinese Open Wordnet Copyright 2013,2014 by Francis Bond and Shan
+Wang.  All rights reserved.
+&#32;&#32;
+THIS SOFTWARE AND DATABASE IS PROVIDED "AS IS" AND WE MAKE NO
+REPRESENTATIONS OR WARRANTIES, EXPRESS OR IMPLIED.  BY WAY OF EXAMPLE,
+BUT NOT LIMITATION, WE MAKE NO REPRESENTATIONS OR WARRANTIES OF
+MERCHANTABILITY OR FITNESS FOR ANY PARTICULAR PURPOSE OR THAT THE USE
+OF THE LICENSED SOFTWARE, DATABASE OR DOCUMENTATION WILL NOT INFRINGE
+ANY THIRD PARTY PATENTS, COPYRIGHTS, TRADEMARKS OR OTHER RIGHTS.
+&#32;&#32;
+Title to copyright in this software, database and any associated
+documentation shall at all times remain with the copyright holders and
+LICENSEE agrees to preserve same.
+</pre>
+      </details>
+    </details>
+  </details>
+</footer>
 </div>
 <dialog id="deck-dialog" aria-labelledby="deck-title"><form id="deck-form" class="form"><h2 id="deck-title">新建词库</h2><label>词库名称<input name="name" required maxlength="40" autofocus></label><div class="actions"><button type="button" id="cancel-deck">取消</button><button class="primary">创建词库</button></div><p id="deck-status" class="status" role="status"></p></form></dialog>
 <dialog id="plan-dialog" aria-labelledby="plan-title">
