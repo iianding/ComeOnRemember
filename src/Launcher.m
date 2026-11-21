@@ -140,7 +140,8 @@
     if ([action isEqual:@"save"]) {
         [self saveValue:body[@"value"] forKey:body[@"key"] reply:reply];
     } else if ([action isEqual:@"speak"] && [body[@"text"] isKindOfClass:NSString.class]) {
-        [self speak:body[@"text"] reply:reply];
+        NSString *language = [body[@"language"] isEqual:@"en-US"] ? @"en-US" : @"en-GB";
+        [self speak:body[@"text"] language:language reply:reply];
     } else if ([action isEqual:@"stopSpeech"]) {
         [self.speaker stopSpeakingAtBoundary:AVSpeechBoundaryImmediate];
         reply(@YES, nil);
@@ -173,9 +174,10 @@
     reply(@YES, nil);
 }
 
-- (void)speak:(NSString *)text reply:(void (^)(id, NSString *))reply {
-    AVSpeechSynthesisVoice *voice = [AVSpeechSynthesisVoice voiceWithLanguage:@"en-GB"] ?:
-        [AVSpeechSynthesisVoice voiceWithLanguage:@"en-US"];
+- (void)speak:(NSString *)text language:(NSString *)language reply:(void (^)(id, NSString *))reply {
+    NSString *fallback = [language isEqualToString:@"en-US"] ? @"en-GB" : @"en-US";
+    AVSpeechSynthesisVoice *voice = [AVSpeechSynthesisVoice voiceWithLanguage:language] ?:
+        [AVSpeechSynthesisVoice voiceWithLanguage:fallback];
     if (!voice) {
         reply(nil, @"请先在系统设置中下载英语语音。");
         return;
@@ -185,7 +187,7 @@
     utterance.voice = voice;
     utterance.rate = AVSpeechUtteranceDefaultSpeechRate * .88;
     [self.speaker speakUtterance:utterance];
-    reply(@YES, nil);
+    reply(@{@"language": voice.language}, nil);
 }
 
 - (void)exportBackup:(NSString *)data name:(NSString *)name reply:(void (^)(id, NSString *))reply {

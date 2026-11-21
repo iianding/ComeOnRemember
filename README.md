@@ -13,14 +13,23 @@ ComeOnRemember 是一款离线英语词汇练习工具，用来记词义，也�
 
 ### 主要功能
 
-- **两种练习**。看英文回想中文释义，或看中文场景尝试用英文表达。翻卡后可看中英例句并听发音。
-- **复习计划**。自定每日题量，按记忆情况安排下一次复习。使用练习优先抽取已标注的常用义项。
+- **三种练习模式**。只记忆、只使用，或混合练习。看中文场景尝试用英文表达，翻卡后可查看中英例句、听发音，并标记想到了其他正确表达。
+- **复习计划**。分别设置每天新学目标和到期复习额度，提前查看首轮预计用时。使用按义项复习，同一义项跨词库共享进度。
 - **内置与自定义词库**。收录上万词条，涵盖日常英语、四六级、考研、雅思和托福。也可以创建自己的词库。
-- **本地学习进度**。支持多个学习档案，以及进度备份和恢复。
+- **词条详情与发音**。在词库中展开词条，查看音标、词性、例句和义项进度。可选择英式或美式发音，使用设备上的英语音色。
+- **本地学习进度**。分开显示练过和已掌握的词数，支持多个学习档案，以及进度备份和恢复。
 
 词库和例句的来源、授权与署名见 [数据声明](src/licenses/)。
 
 ### 版本记录
+
+**v0.3.0 · 2026-11-21**
+
+新增 1,439 条双语例句，补齐内置词条的音标和词性。增加词条详情、单词复习进度和英美音偏好。
+
+**v0.2.0 · 2026-11-21**
+
+补齐 1,053 个词的实际场景。增加练习模式、义项进度和替代表达反馈，分开安排新学与到期复习。
 
 **v0.1.0 · 2026-11-20**
 
@@ -37,14 +46,23 @@ ComeOnRemember is an offline English vocabulary trainer for recalling meanings a
 
 ### Key features
 
-- **Two practice modes.** Recall the Chinese meaning of an English word, or express a Chinese scenario in English. Flip the card to see bilingual examples and hear them read aloud.
-- **Review plans.** Set your daily targets and schedule reviews based on how well you remember each word. Context practice gives priority to meanings marked as common.
+- **Three practice modes.** Practise recall, usage, or both. Express a Chinese scenario in English, then flip the card for bilingual examples, pronunciation, and an option to mark a correct alternative answer.
+- **Review plans.** Set separate targets for new cards and due reviews, and preview the time to finish the first pass. Usage is reviewed by sense, with progress shared for the same sense across word lists.
 - **Built-in and custom word lists.** Explore over 10,000 entries covering everyday English, CET-4 and CET-6, China's postgraduate entrance exam, IELTS and TOEFL. You can also create your own lists.
-- **Local progress.** Use multiple study profiles and back up or restore your progress.
+- **Word details and pronunciation.** Expand a word to see phonetics, parts of speech, examples, and progress by sense. Choose British or American speech using the English voices installed on your device.
+- **Local progress.** See separate counts for practised and mastered words, use multiple study profiles, and back up or restore progress.
 
 See the [data notices](src/licenses/) for sources, licences and attribution.
 
 ### Version history
+
+**v0.3.0 · 2026-11-21**
+
+Added 1,439 bilingual examples and filled gaps in phonetics and parts of speech. Added expandable word details, per-word review progress and an accent preference.
+
+**v0.2.0 · 2026-11-21**
+
+Added practical scenarios for 1,053 words, selectable modes, sense-level progress, and feedback for alternative answers. New cards and due reviews now have separate targets.
 
 **v0.1.0 · 2026-11-20**
 

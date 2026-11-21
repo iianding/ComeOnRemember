@@ -36,7 +36,7 @@ window.crNative = {
     await pending;
     return unsaved.size === 0;
   },
-  speak: text => send({action:'speak', text}),
+  speak: (text, language) => send({action:'speak', text, language}),
   stopSpeech: () => send({action:'stopSpeech'}),
   exportBackup: (data, name) => send({action:'export', data, name}),
   importBackup: () => send({action:'import'})
