@@ -1,3 +1,13 @@
+<!--
+ * @Author: Ian Ding
+ * @Email: tbyding2@liverpool.ac.uk
+ * @LastEditTime: 2026-11-21 11:10:15
+ * @FilePath: /ComeOnRemember/README.md
+ * @Description:
+ *
+ * Copyright (c) 2026 by Ian, All Rights Reserved.
+ * @:
+-->
 # ComeOnRemember
 
 [中文](#中文) · [English](#english)
@@ -8,7 +18,7 @@ ComeOnRemember 是一款离线英语词汇练习工具，用来记词义，也�
 
 ### 开始使用
 
-- [下载 Mac 应用（Apple 芯片）](https://github.com/iianding/ComeOnRemember/raw/refs/heads/main/ComeOnRemember-macOS-arm64.zip)。解压后打开 `ComeOnRemember.app`。
+- [下载 Mac 应用（Apple 芯片）](https://github.com/iianding/ComeOnRemember/raw/refs/heads/main/ComeOnRemember-v0.3.0-macOS-arm64)。解压后打开 `ComeOnRemember.app`。
 - [浏览器版](src/compat/index.html)可以下载为单个 HTML 文件，直接用浏览器打开。
 
 ### 主要功能
