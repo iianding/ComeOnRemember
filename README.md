@@ -33,17 +33,23 @@ ComeOnRemember 是一款离线英语词汇练习工具，用来记词义，也�
 
 ### 版本记录
 
+**v0.4.0 · 2026-11-22**
+
+- 首页显示当前词库预计何时练完首轮，并随机附上一句轻松提示。
+- 答题后短暂显示下次复习时间，提示淡出后自动进入下一题。
+- 「使用」题的答案、提示和例句标签统一显示当前义项，并修正部分例句的释义、词性和高亮标注。
+
 **v0.3.0 · 2026-11-21**
 
-新增 1,439 条双语例句，补齐内置词条的音标和词性。增加词条详情、单词复习进度和英美音偏好。
+- 新增 1,439 条双语例句，补齐内置词条的音标和词性。增加词条详情、单词复习进度和英美音偏好。
 
 **v0.2.0 · 2026-11-21**
 
-补齐 1,053 个词的实际场景。增加练习模式、义项进度和替代表达反馈，分开安排新学与到期复习。
+- 补齐 1,053 个词的实际场景。增加练习模式、义项进度和替代表达反馈，分开安排新学与到期复习。
 
 **v0.1.0 · 2026-11-20**
 
-支持离线词汇练习、复习计划和进度备份。提升了界面的玻璃透明度，并把数据授权移到「关于」中。
+- 支持离线词汇练习、复习计划和进度备份。提升了界面的玻璃透明度，并把数据授权移到「关于」中。
 
 ## English
 
@@ -51,7 +57,7 @@ ComeOnRemember is an offline English vocabulary trainer for recalling meanings a
 
 ### Getting started
 
-- [Download the Mac app (Apple silicon)](https://github.com/iianding/ComeOnRemember/raw/refs/heads/main/ComeOnRemember-macOS-arm64.zip). Unzip the download and open `ComeOnRemember.app`.
+- [Download the Mac app (Apple silicon)](https://github.com/iianding/ComeOnRemember/raw/refs/heads/main/ComeOnRemember-v0.3.0-macOS-arm64.zip). Unzip the download and open `ComeOnRemember.app`.
 - Download the [browser version](src/compat/index.html) as a single HTML file and open it in a browser.
 
 ### Key features
@@ -66,14 +72,20 @@ See the [data notices](src/licenses/) for sources, licences and attribution.
 
 ### Version history
 
+**v0.4.0 · 2026-11-22**
+
+- The home screen shows when you’re likely to finish your first pass through the selected deck, with a randomly chosen light-hearted message.
+- After each answer, the next review time appears briefly and fades out before the next card.
+- Usage cards now show the meaning being tested consistently across the answer, hint, and example label. This update also corrects some example definitions, part-of-speech labels, and highlights.
+
 **v0.3.0 · 2026-11-21**
 
-Added 1,439 bilingual examples and filled gaps in phonetics and parts of speech. Added expandable word details, per-word review progress and an accent preference.
+- Added 1,439 bilingual examples and filled gaps in phonetics and parts of speech. Added expandable word details, per-word review progress and an accent preference.
 
 **v0.2.0 · 2026-11-21**
 
-Added practical scenarios for 1,053 words, selectable modes, sense-level progress, and feedback for alternative answers. New cards and due reviews now have separate targets.
+- Added practical scenarios for 1,053 words, selectable modes, sense-level progress, and feedback for alternative answers. New cards and due reviews now have separate targets.
 
 **v0.1.0 · 2026-11-20**
 
-Supports offline vocabulary practice, review plans and progress backups. Made the glass panels more transparent and moved data licences into About.
+- Supports offline vocabulary practice, review plans and progress backups. Made the glass panels more transparent and moved data licences into About.
